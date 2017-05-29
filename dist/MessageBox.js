@@ -36,7 +36,7 @@ var MessageBox = function () {
 
     this.language = initialLanguage || MessageBox.language || 'en';
     this.messageList = messages || {};
-    this.interpolate = interpolate || MessageBox.interpolate || /{{([\s\S]+?)}}/g;
+    this.interpolate = interpolate || MessageBox.interpolate || /{{{?([\s\S]+?)}?}}/g;
     if (tracker) this.trackerDep = new tracker.Dependency();
   }
 
